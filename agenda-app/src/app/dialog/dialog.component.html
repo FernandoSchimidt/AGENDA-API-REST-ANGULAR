@@ -1,0 +1,22 @@
+<mat-card style="height: 170px;">
+  <mat-card-title>Atualizar Contato</mat-card-title>
+  <form [formGroup]="formulario" (ngSubmit)="submit(contato)">
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Nome:</mat-label>
+        <input matInput  formControlName="nome" value="{{contato.nome}}">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email:</mat-label>
+        <input matInput formControlName="email" value="{{contato.email}}">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer style="padding: 10px;">
+
+      <button style="margin-right: 15px;" [disabled]="!formulario.valid" mat-raised-button color="primary">Atualizar</button>
+      <button mat-raised-button color="warn" (click)="fechar()">Fechar</button>
+    </mat-card-footer>
+
+
+  </form>
+</mat-card>

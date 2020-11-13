@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms'
 import { MatDialogModule } from '@angular/material/dialog'
 
-
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input'
@@ -18,13 +18,15 @@ import { MatCardModule } from '@angular/material/card'
 import { ContatoComponent } from './contato/contato.component'
 import { ContatoService } from './contato.service';
 import { ContatoDetalheComponent } from './contato-detalhe/contato-detalhe.component';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { DialogComponent } from './dialog/dialog.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ContatoComponent,
-    ContatoDetalheComponent
+    ContatoDetalheComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,8 @@ import { ContatoDetalheComponent } from './contato-detalhe/contato-detalhe.compo
     MatIconModule,
     MatCardModule,
     MatDialogModule,
+    MatPaginatorModule,
+    MatSnackBarModule,
 
 
     BrowserAnimationsModule,
